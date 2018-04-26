@@ -7,4 +7,7 @@
 2. Import from the csv file to the database with:
 ```sql
 COPY hvdsa.parcel FROM 'file.csv' WITH CSV HEADER;
+ALTER TABLE hvdsa.parcel ADD COLUMN id SERIAL PRIMARY KEY;
+ALTER TABLE hvdsa.parcel ALTER COLUMN prop_street_num TYPE int;
+ALTER TABLE hvdsa.parcel ALTER COLUMN tax_year TYPE int;
 ```
