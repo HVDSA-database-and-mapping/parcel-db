@@ -7,3 +7,5 @@
 2. Clean up the data from Drive with [this shell script](csv_concatenate.sh).
 
 2. Create the schema and load the data using the command from [this repo](all_counties_parcel_data.sql).
+
+2. Convert the ArcGIS rings into PostGIS geometries with [the Python script](arcgis_to_wkt.py). This takes a while.
