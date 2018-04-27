@@ -212,7 +212,8 @@ CREATE TABLE IF NOT EXISTS hvdsa.parcel (
     txpyrs_street_addr varchar(100),
     txpyrs_zip_code varchar(20),
     unit_apt_num varchar(20),
-    geometry text
+    geometry text,
+    parcel_boundary geometry(MULTIPOLYGON, 3857)
 );
 
 INSERT INTO hvdsa.parcel
