@@ -160,7 +160,7 @@ INSERT INTO hvdsa.counties (name) VALUES ('Washtenaw');
 
 CREATE TABLE IF NOT EXISTS hvdsa.parcel (
     id SERIAL PRIMARY KEY,
-    county varchar(20) REFERENCES hvdsa.counties,
+    county_gid int REFERENCES hvdsa.county,
     short_pin varchar(100),
     zoning varchar(100),
     pre_percent numeric,
@@ -222,7 +222,7 @@ owner_city, owner_name, owner_name2, owner_state, owner_street, owner_zip, pin, 
 prop_state, prop_street, prop_zip, school_district, shape_area, shape_len, status_desc, taxable_value,
 geometry)
 SELECT
-'Jackson', shortpin, p_acreage, p_assmbor1, p_hpercent, legal_desc, o_city, owner, owner2, o_state,
+1405, shortpin, p_acreage, p_assmbor1, p_hpercent, legal_desc, o_city, owner, owner2, o_state,
 o_address, o_zip, pin, p_city, p_class, p_state, p_fulladd, p_zip, schooldist, shape_area, shape_length,
 p_status, p_taxmbor1, geometry
 FROM hvdsa.parcel_jackson;
@@ -234,7 +234,7 @@ INSERT INTO hvdsa.parcel
     pin, prop_city, prop_class, prop_class_description, prop_state, prop_street,
     prop_zip, school_district, school_name, shape_area, shape_len, taxable_value, geometry)
 SELECT
-'Livingston', short_pid, zoning, pre_pct, pre_val, eq_val, tent_val, gis_acres, assess_val, legal,
+1729, short_pid, zoning, pre_pct, pre_val, eq_val, tent_val, gis_acres, assess_val, legal,
 o_careof, o_city, o_name1, o_name2, o_state, o_street, o_zip, long_pid, p_city, class, class_desc,
 p_state, p_road, p_zip, sch_dist, sd_desc, shapestarea, shapestlength, taxabl_val, geometry
 FROM hvdsa.parcel_livingston;
@@ -249,7 +249,7 @@ INSERT INTO hvdsa.parcel
     status_desc, taxable_value, txpyrs_care_of, txpyrs_city, txpyrs_country, txpyrs_name,
     txpyrs_state, txpyrs_street_addr, txpyrs_zip_code, unit_apt_num, geometry)
 SELECT
-'Washtenaw', acreage_of_parent, assessed_value, building_assessment, capped_value, cvt_code, cvt_description,
+2492, acreage_of_parent, assessed_value, building_assessment, capped_value, cvt_code, cvt_description,
 historical_district, homestead_taxable, homestea_pct, legal_description,
 owner_care_of, owner_city, owner_country, owner_name, owner_name2, owner_state, owner_street,
 owner_zip, parent_parcel_num, pin, prop_city, prop_class, prop_class_description, prop_state,
