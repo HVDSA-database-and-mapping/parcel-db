@@ -1,6 +1,6 @@
 # Database Restoration
 
-If you want to create a new instance of the database or need to restore it, the easiest way is to use [pg_restore]. A dump of the PostgreSQL database is kept on the HVDSA Database and Mapping Project Google Drive. Set up a PostgreSQL database server with the PostGIS extensions installed, and run ```pg_restore -C -d hvdsa hvdsa_db.bkp``` to recreate the full database.
+If you want to create a new instance of the database or need to restore it, the easiest way is to use [pg_restore](https://www.postgresql.org/docs/9.6/static/app-pgrestore.html). A dump of the PostgreSQL database is kept on the HVDSA Database and Mapping Project Google Drive. Set up a PostgreSQL database server with the PostGIS extensions installed, and run ```pg_restore -C -d hvdsa hvdsa_db.bkp``` to recreate the full database.
 
 # Database Creation Notes
 
